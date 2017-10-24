@@ -1,0 +1,4 @@
+# Server HTTP port.
+server:
+    port: 8280
+    servlet-path: /api

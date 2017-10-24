@@ -1,0 +1,3 @@
+# Server HTTP port.
+server:
+    port: 9004
