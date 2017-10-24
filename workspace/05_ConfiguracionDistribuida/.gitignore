@@ -2,8 +2,6 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 
 ### STS ###
-.metadata/
-RemoteSystemsTempFiles/
 .apt_generated
 .classpath
 .factorypath
@@ -24,4 +22,3 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
-/.recommenders/
