@@ -1,4 +1,4 @@
-package com.example.stock.dto;
+package com.example.notificaciones.dto;
 
 public class StockStatusDto {
 

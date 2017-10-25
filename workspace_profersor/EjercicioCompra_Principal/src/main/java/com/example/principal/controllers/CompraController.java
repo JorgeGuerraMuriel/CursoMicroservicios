@@ -6,10 +6,13 @@ import java.net.URISyntaxException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
+import org.springframework.jms.core.JmsTemplate;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
+
+import com.example.notificaciones.dto.NotificacionDto;
 
 // Servicio JSON, la compra no la considero un recurso
 // Servicio de orquestacion
@@ -27,6 +30,10 @@ public class CompraController {
 	@Qualifier("restTemplate")
 	private RestTemplate restTemplate;
 
+	@Autowired
+	@Qualifier("jmsTemplate")
+	private JmsTemplate jmsTemplate;
+	
 	@RequestMapping("/compra")
 	public void lanzarCompraProducto() throws RestClientException, URISyntaxException {
 
@@ -44,23 +51,27 @@ public class CompraController {
 
 		// Aproximacion microservicios
 		// Actualizar el Stock
-		ResponseEntity<Void> respuestaActualizarStock = restTemplate
-				.getForEntity(
-						new URI(
-								"http://localhost:8480/decrementarStockProducto/1/10"),
-						Void.class);
-
-		System.out.println("Codigo de respuesta de ActualizarStock: "
-				+ respuestaActualizarStock.getStatusCode());
+//		ResponseEntity<Void> respuestaActualizarStock = restTemplate
+//				.getForEntity(
+//						new URI(
+//								"http://localhost:8480/decrementarStockProducto/1/10"),
+//						Void.class);
+//
+//		System.out.println("Codigo de respuesta de ActualizarStock: "
+//				+ respuestaActualizarStock.getStatusCode());
 		// Notificar al usuario
-		ResponseEntity<Void> respuestaNotificarUsuario = restTemplate
-				.getForEntity(
-						new URI(
-								"http://localhost:8680/notificarUsuario/1?tipoNotificacion=loquesea"),
-						Void.class);
+//		ResponseEntity<Void> respuestaNotificarUsuario = restTemplate
+//				.getForEntity(
+//						new URI(
+//								"http://localhost:8680/notificarUsuario/1?tipoNotificacion=loquesea"),
+//						Void.class);
+//
+//		System.out.println("Codigo de respuesta de NotificarUsuario: "
+//				+ respuestaNotificarUsuario.getStatusCode());
+		
 
-		System.out.println("Codigo de respuesta de NotificarUsuario: "
-				+ respuestaNotificarUsuario.getStatusCode());
+        jmsTemplate.convertAndSend("Usuarios", new NotificacionDto(1, "Loquesea"));
+		
 		// Revisar Stock
 		ResponseEntity<Void> respuestaRevisarStock = restTemplate
 				.getForEntity(
