@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.ejemplo.arquitectura.cloud</groupId>
-	<artifactId>04_ClienteMicroservicioATravesEureka</artifactId>
+	<artifactId>11_ClienteMicroservicioATravesEureka</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>04_ClienteMicroservicioATravesEureka</name>
+	<name>11_ClienteMicroservicioATravesEureka</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
