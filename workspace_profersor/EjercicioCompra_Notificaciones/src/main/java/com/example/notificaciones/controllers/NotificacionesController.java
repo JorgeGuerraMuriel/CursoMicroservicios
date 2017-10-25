@@ -1,24 +1,26 @@
 package com.example.notificaciones.controllers;
 
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.jms.annotation.JmsListener;
+import org.springframework.stereotype.Component;
 
-@RestController
+import com.example.notificaciones.dto.NotificacionDto;
+
+//@RestController
+@Component
 public class NotificacionesController {
 
 	// http:..../notificarUsuario/{idUsuario}?tipoNotificacion=loquesea
-	@RequestMapping(path="/notificarUsuario/{idUsuario}", method=RequestMethod.GET)
-	public void enviarNotificacionUsuario(@PathVariable Long idUsuario, @RequestParam String tipoNotificacion){
-		System.out.println("Notificar usuario: " + idUsuario + " una notificacion de tipo: " + tipoNotificacion);
+	//@RequestMapping(path="/notificarUsuario/{idUsuario}", method=RequestMethod.GET)
+	@JmsListener(destination = "Usuarios", containerFactory = "myFactory")
+	public void enviarNotificacionUsuario(NotificacionDto notificacion){
+		System.out.println("Notificar usuario: " + notificacion.getId() + " una notificacion de tipo: " + notificacion.getTipoNotificacion());
 	}
 	
 	// http:..../notificarProveedor/{idProveedor}?tipoNotificacion=loquesea
-	@RequestMapping(path="/notificarProveedor/{idProveedor}", method=RequestMethod.GET)
-	public void enviarNotificacionProveedor(@PathVariable Long idProveedor, @RequestParam String tipoNotificacion){
-		System.out.println("Notificar proveedor: " + idProveedor + " una notificacion de tipo: " + tipoNotificacion);
+	//@RequestMapping(path="/notificarProveedor/{idProveedor}", method=RequestMethod.GET)
+	@JmsListener(destination = "Proveedores", containerFactory = "myFactory")
+	public void enviarNotificacionProveedor(NotificacionDto notificacion){
+		System.out.println("Notificar proveedor: " + notificacion.getId() + " una notificacion de tipo: " + notificacion.getTipoNotificacion());
 	}
 	
 }
