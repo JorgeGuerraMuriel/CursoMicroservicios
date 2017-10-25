@@ -23,6 +23,5 @@ public class StockStatusDto {
 	}
 	public StockStatusDto() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 }
