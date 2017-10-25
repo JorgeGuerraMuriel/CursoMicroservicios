@@ -40,3 +40,46 @@
 2017-10-24 13:50:43,714 | INFO  | Apache ActiveMQ 5.14.5 (localhost, ID:Equipo-50420-1508842903244-0:1) is shutdown | org.apache.activemq.broker.BrokerService | Thread-23
 2017-10-24 13:50:43,714 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@2923a47c: startup date [Tue Oct 24 13:01:40 CEST 2017]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | Thread-23
 2017-10-24 13:50:43,737 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | Thread-23
+2017-10-24 17:28:43,562 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@57380fc: startup date [Tue Oct 24 17:28:43 CEST 2017]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2017-10-24 17:28:44,931 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\CLE\Desktop\git\CursoMicroservicios\workspace_jorge\apache-activemq-5.14.5\bin\..\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2017-10-24 17:28:44,993 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2017-10-24 17:28:45,039 | INFO  | Recovering from the journal @1:11905 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2017-10-24 17:28:45,070 | INFO  | Recovery replayed 501 operations from the journal in 0.062 seconds. | org.apache.activemq.store.kahadb.MessageDatabase | main
+2017-10-24 17:28:45,085 | INFO  | PListStore:[C:\Users\CLE\Desktop\git\CursoMicroservicios\workspace_jorge\apache-activemq-5.14.5\bin\..\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2017-10-24 17:28:45,258 | INFO  | Apache ActiveMQ 5.14.5 (localhost, ID:Equipo-51577-1508858925100-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2017-10-24 17:28:45,335 | INFO  | Listening for connections at: tcp://Equipo:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2017-10-24 17:28:45,335 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2017-10-24 17:28:45,351 | INFO  | Listening for connections at: amqp://Equipo:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2017-10-24 17:28:45,351 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2017-10-24 17:28:45,366 | INFO  | Listening for connections at: stomp://Equipo:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2017-10-24 17:28:45,366 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2017-10-24 17:28:45,366 | INFO  | Listening for connections at: mqtt://Equipo:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2017-10-24 17:28:45,381 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2017-10-24 17:28:45,511 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@68e6e750{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2017-10-24 17:28:45,573 | INFO  | Listening for connections at ws://Equipo:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2017-10-24 17:28:45,573 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2017-10-24 17:28:45,573 | INFO  | Apache ActiveMQ 5.14.5 (localhost, ID:Equipo-51577-1508858925100-0:1) started | org.apache.activemq.broker.BrokerService | main
+2017-10-24 17:28:45,573 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2017-10-24 17:28:45,573 | WARN  | Store limit is 102400 mb (current store usage is 0 mb). The data directory: C:\Users\CLE\Desktop\git\CursoMicroservicios\workspace_jorge\apache-activemq-5.14.5\bin\..\data\kahadb only has 2991 mb of usable space. - resetting to maximum available disk space: 2991 mb | org.apache.activemq.broker.BrokerService | main
+2017-10-24 17:28:45,588 | WARN  | Temporary Store limit is 51200 mb (current store usage is 0 mb). The data directory: C:\Users\CLE\Desktop\git\CursoMicroservicios\workspace_jorge\apache-activemq-5.14.5\bin\..\data only has 2991 mb of usable space. - resetting to maximum available disk space: 2991 mb | org.apache.activemq.broker.BrokerService | main
+2017-10-24 17:28:46,220 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2017-10-24 17:28:46,405 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2017-10-24 17:28:46,405 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2017-10-24 17:28:46,466 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2017-10-24 17:28:46,759 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2017-10-24 17:28:46,851 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2017-10-24 17:37:55,860 | WARN  | Transport Connection to: tcp://127.0.0.1:51593 failed: java.io.IOException: Frame size of 1 GB larger than max allowed 100 MB | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:51593@61616
+2017-10-24 18:09:19,501 | INFO  | Apache ActiveMQ 5.14.5 (localhost, ID:Equipo-51577-1508858925100-0:1) is shutting down | org.apache.activemq.broker.BrokerService | Thread-24
+2017-10-24 18:09:19,517 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | Thread-24
+2017-10-24 18:09:19,517 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | Thread-24
+2017-10-24 18:09:19,517 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | Thread-24
+2017-10-24 18:09:19,517 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | Thread-24
+2017-10-24 18:09:19,533 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | Thread-24
+2017-10-24 18:09:19,533 | INFO  | PListStore:[C:\Users\CLE\Desktop\git\CursoMicroservicios\workspace_jorge\apache-activemq-5.14.5\bin\..\data\localhost\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | Thread-24
+2017-10-24 18:09:19,533 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-24
+2017-10-24 18:09:19,533 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-24
+2017-10-24 18:09:19,533 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | Thread-24
+2017-10-24 18:09:19,549 | INFO  | Apache ActiveMQ 5.14.5 (localhost, ID:Equipo-51577-1508858925100-0:1) uptime 40 minutes | org.apache.activemq.broker.BrokerService | Thread-24
+2017-10-24 18:09:19,549 | INFO  | Apache ActiveMQ 5.14.5 (localhost, ID:Equipo-51577-1508858925100-0:1) is shutdown | org.apache.activemq.broker.BrokerService | Thread-24
+2017-10-24 18:09:19,549 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@57380fc: startup date [Tue Oct 24 17:28:43 CEST 2017]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | Thread-24
+2017-10-24 18:09:19,566 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | Thread-24
